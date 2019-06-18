@@ -7,6 +7,7 @@ class Config(object):
     CSRF_ENABLED = True
     # retrieve from local environemt file
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'this-really-needs-to-be-changed'
+    SQLALCHEMY_DATABASE_URI  = os.environ['DATABASE_URL']
 
 
 class ProductionConfig(Config):
